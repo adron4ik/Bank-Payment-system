@@ -1,16 +1,8 @@
-# React + Vite
+# Розробка системи переказу коштів
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Хід роботи
+*10.10.25*
+**1. перший коміт виявився не важливим, оскільки було рішення провести ре-факторинг коду, та зберігати дані не у localstorage, а обробляти їх на сервері та зберігати у базу даних, але оскільки для мене головним завданням курсової роботи є непереускладнення, я вирішив що буду зберігати дані у json**
+*19.10.25*
+**2. У другому коміті було створена нова директорія (backend), яка містить у собі файл server.js, який обробляє запит та надсилає дані на маршрути (/login, /registration), дані отримуються безпосередньо з форми фронт-енд частини, також містится директорія(models, яка містить у собі 2 класи, перший(User.js) - створює об’єкт користувача, другий -(UserStorage) виконує зберігання, пошук і додавання користувачів у файл без бази даних.). Тепер про сервер, який має на момент коміту 2 POST запити, які обробляють реєстраці та лгогін нового користувача, тобто створення нового користувача або перевірку існуючого,**
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
