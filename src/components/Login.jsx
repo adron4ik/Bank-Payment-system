@@ -24,7 +24,7 @@ export default function Login({ onLoginSuccess }) {
       }
 
       alert(data.message)
-      onLoginSuccess()
+      onLoginSuccess(data.user)
     } catch (err) {
       console.error(err)
       alert('Помилка при вході')

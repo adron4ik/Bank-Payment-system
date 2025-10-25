@@ -35,9 +35,10 @@ function App() {
     }
   }
 
-  const handleLoginSuccess = () => {
+  const handleLoginSuccess = (user) => {
     setIsLoggedIn(true)
     localStorage.setItem('isLoggedIn', 'true')
+    localStorage.setItem('username', user.username)
     navigate('/UserProfile')
   }
 

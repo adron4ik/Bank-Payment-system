@@ -1,17 +1,14 @@
 [
   {
     "username": "Adrian",
-    "password": "ывывы",
-    "email": "mrsaisyt@gmail.com"
+    "password": "123",
+    "email": "mrsaisyt@gmail.com",
+    "balance": 899
   },
   {
-    "username": "Adrian2",
-    "password": "bober",
-    "email": "bruh@gmail.com"
-  },
-  {
-    "username": "Adrian3",
-    "password": "111",
-    "email": "sdsdsd@gmail.com"
+    "username": "test",
+    "password": "123",
+    "email": "mr.saisyt@gmail.com",
+    "balance": 1101
   }
 ]
