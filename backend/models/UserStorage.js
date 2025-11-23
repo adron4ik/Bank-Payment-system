@@ -22,4 +22,9 @@ export default class UserStorage {
     users.push(user)
     fs.writeFileSync(this.filePath, JSON.stringify(users, null, 2))
   }
+  deleteUser(user) {
+    this.users = this.getAllUsers()
+    const updatedUsers = filter.users(u => u.username !== user.username)
+    fs.writeFileSync(this.filePath, JSON.stringify(users, null, 2))
+  }
 }

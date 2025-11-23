@@ -57,6 +57,22 @@ app.get('/user/:username', (req, res) => {
   if (!user) return res.status(404).json({ message: 'Користувач не знайдений' })
   res.status(200).json({ username: user.username, email: user.email, balance: user.balance })
 })
+// get transactions
+app.get('/transactions/:username', (req, res) => {
+  const { username } = req.params
+  const allTransactions = transactionStorage.getAllTransactions()
+  const userTransactions = allTransactions.filter(
+    t => t.from === username || t.to === username
+  )
+  res.status(200).json(userTransactions)
+})
+// get uetname to userProfile(have to rafact on state manager)
+app.get('./updateUsers', (req, res) => {
+  const data = storage.findUser(() => {
+    this.username
+  })
+})
+
 
 
 app.listen(PORT, () => {

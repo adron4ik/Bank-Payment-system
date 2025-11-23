@@ -5,7 +5,9 @@ import Payment from './components/Payment'
 import Login from './components/Login'
 import { useState } from 'react'
 
+
 function App() {
+  const [adminUser, setAdminUser] = useState(null)
   const navigate = useNavigate()
   const [isLoggedIn, setIsLoggedIn] = useState(() => localStorage.getItem('isLoggedIn') === 'true')
   const [form, setForm] = useState({ username: '', password: '', email: '' })
@@ -50,6 +52,8 @@ function App() {
 
   return (
     <div>
+      
+
       {!isLoggedIn ? (
         <div className="auth-container">
           <div className="tabs">

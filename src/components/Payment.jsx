@@ -3,7 +3,6 @@ import { useEffect, useState } from 'react'
 export default function Payment() {
   const [userData, setUserData] = useState(null)
   const [form, setForm] = useState({ to: '', amount: '' })
-
   const username = localStorage.getItem('username')
 
   useEffect(() => {
@@ -49,6 +48,7 @@ export default function Payment() {
         const updated = await fetch(`http://localhost:3001/user/${username}`)
         const updatedData = await updated.json()
         setUserData(updatedData)
+        setForm({ to: '', amount: '' })
       }
     } catch (err) {
       console.error(err)
@@ -57,34 +57,35 @@ export default function Payment() {
   }
 
   return (
-    <div>
-      <h2>Переказ коштів</h2>
+    <div className="payment-container">
+      <h2 className="payment-title">💸 Переказ коштів</h2>
+
       {userData ? (
-        <>
-          <p>Користувач: <b>{userData.username}</b></p>
-          <p>Баланс: <b>{userData.balance} ₴</b></p>
-        </>
+        <div className="payment-user">
+          <p>Користувач: <span>{userData.username}</span></p>
+          <p>Баланс: <span>{userData.balance} ₴</span></p>
+        </div>
       ) : (
         <p>Завантаження...</p>
       )}
 
-      <form onSubmit={handleTransfer}>
+      <form onSubmit={handleTransfer} className="payment-form">
         <input
           type="text"
           name="to"
           placeholder="Кому переказати"
           value={form.to}
           onChange={handleChange}
+          required
         />
-        <br />
         <input
           type="number"
           name="amount"
           placeholder="Сума"
           value={form.amount}
           onChange={handleChange}
+          required
         />
-        <br />
         <button type="submit">Переказати</button>
       </form>
     </div>

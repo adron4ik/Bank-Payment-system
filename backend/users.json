@@ -3,12 +3,30 @@
     "username": "Adrian",
     "password": "123",
     "email": "mrsaisyt@gmail.com",
-    "balance": 899
+    "balance": 2753
   },
   {
     "username": "test",
     "password": "123",
     "email": "mr.saisyt@gmail.com",
-    "balance": 1101
+    "balance": 1224
+  },
+  {
+    "username": "Adrian1",
+    "password": "123",
+    "email": "mrsaisyt@gmail.com",
+    "balance": 1000
+  },
+  {
+    "username": "GenykLoh",
+    "password": "123",
+    "email": "genykloh@gmail.com",
+    "balance": 23
+  },
+  {
+    "username": "TARASLOH",
+    "password": "1234",
+    "email": "mrsaisyt@gmail.com",
+    "balance": 0
   }
 ]

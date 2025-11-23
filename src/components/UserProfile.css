@@ -1,0 +1,83 @@
+.profile-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #2b2b3c;
+  padding: 30px 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.5s ease;
+}
+
+.profile-title {
+  text-align: center;
+  color: #a259ff;
+  margin-bottom: 25px;
+}
+
+.profile-card {
+  background: #3c3c4f;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  color: #fff;
+  line-height: 1.6;
+}
+
+.profile-card span {
+  color: #a259ff;
+  font-weight: 600;
+}
+
+.transactions-title {
+  color: #4effa1;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.transactions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.transaction-card {
+  background: #3c3c4f;
+  padding: 15px 20px;
+  border-radius: 12px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.transaction-card:hover {
+  background: #47475e;
+  transform: translateY(-3px);
+}
+
+.transaction-card b {
+  color: #a259ff;
+}
+
+.transaction-card .date {
+  color: #aaa;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.delete-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 14px;
+  background: #ff5e5e;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #ff3b3b;
+  transform: translateY(-2px);
+}
